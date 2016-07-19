@@ -1,5 +1,8 @@
 # .bashrc
 
+# Checks that homesick castles are up-to-date
+which homeshick &>/dev/null && homeshick --quiet refresh 1
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
