@@ -1,7 +1,10 @@
-# .bashrc
+# ~/.bashrc
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+# Source global definitions
+[ -f /etc/bashrc ] && . /etc/bashrc
 
 # Check the window size after each command and, if necessary, update the values
 # of LINES and COLUMNS.
@@ -24,9 +27,6 @@ export MANPAGER="less -X"
 
 # Checks that homesick castles are up-to-date
 which homeshick &>/dev/null && homeshick --quiet refresh 1
-
-# Source global definitions
-[ -f /etc/bashrc ] && . /etc/bashrc
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
