@@ -39,7 +39,7 @@ export GEM_PATH=$HOME/.gem
 
 # Python related settings
 export WORKON_HOME=~/Envs
-[ -f /usr/local/bin/virtualenvwrapper.sh] source /usr/local/bin/virtualenvwrapper.sh
+which virtualenvwrapper.sh &>/dev/null && source $(which virtualenvwrapper.sh)
 
 # travis bash completion
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
