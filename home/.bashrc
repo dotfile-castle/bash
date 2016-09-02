@@ -31,6 +31,9 @@ which homeshick &>/dev/null && homeshick --quiet refresh 1
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Ruby related settings
+export GEM_PATH=$HOME/.gem
+
 # User specific aliases and functions
 
 # travis bash completion
