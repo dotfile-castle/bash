@@ -30,6 +30,9 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
 # IP addresses
 alias ippublic="dig +short myip.opendns.com @resolver1.opendns.com"
 alias iplocal="ipconfig getifaddr en1"
