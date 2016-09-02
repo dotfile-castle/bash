@@ -34,6 +34,10 @@ which homeshick &>/dev/null && homeshick --quiet refresh 1
 # Ruby related settings
 export GEM_PATH=$HOME/.gem
 
+# Python related settings
+export WORKON_HOME=~/Envs
+[ -f /usr/local/bin/virtualenvwrapper.sh] source /usr/local/bin/virtualenvwrapper.sh
+
 # User specific aliases and functions
 
 # travis bash completion
