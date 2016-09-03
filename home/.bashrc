@@ -34,8 +34,19 @@ export MANPAGER="less -X"
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# Ruby related settings
+##
+## Ruby related settings
+##
 export GEM_PATH=$HOME/.gem
+
+# chruby settings
+if [ -d "~/.rbenv/versions/" ]; then
+  RUBIES+=(~/.rbenv/versions/*)
+elif [ -d "~/.rvm/rubies/" ]; then
+  RUBIES+=(~/.rvm/rubies/*)
+fi
+[ -f /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh
+[ -f /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
 # Python related settings
 export WORKON_HOME=~/Envs
