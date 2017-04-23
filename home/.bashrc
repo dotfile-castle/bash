@@ -50,10 +50,10 @@ fi
 
 # Python related settings
 # which virtualenvwrapper.sh &>/dev/null && source $(which virtualenvwrapper.sh)
-if [ -x "~/.pyenv/bin/pyenv" ]; then
+if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
   export PATH="$PATH:$HOME/.pyenv/bin"
   eval "$(pyenv init -)"
-  [ -d "~/.pyenv/plugins/pyenv-virtualenv/" ] && eval "$(pyenv virtualenv-init -)"
+  [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv/" ] && eval "$(pyenv virtualenv-init -)"
 fi
 
 # travis bash completion
