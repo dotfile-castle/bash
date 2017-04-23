@@ -49,8 +49,12 @@ fi
 [ -f /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
 # Python related settings
-export WORKON_HOME=~/Envs
-which virtualenvwrapper.sh &>/dev/null && source $(which virtualenvwrapper.sh)
+# which virtualenvwrapper.sh &>/dev/null && source $(which virtualenvwrapper.sh)
+if [ -x ~/.pyenv/bin/pyenv ]; then
+  export PATH="$PATH:~/.pyenv/bin"
+  eval "$(pyenv init -)"
+  [ -d .pyenv/plugins/pyenv-virtualenv/ ] && eval "$(pyenv virtualenv-init -)"
+fi
 
 # travis bash completion
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
